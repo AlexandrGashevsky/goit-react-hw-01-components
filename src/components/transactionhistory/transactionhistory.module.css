@@ -1,0 +1,13 @@
+.table{
+    width: 512px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th {
+    border: 1px ridge rgba(0, 0, 0, 0.6);
+}
+
+td {
+    border: 1px ridge rgba(0, 0, 0, 0.6);
+}
