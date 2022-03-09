@@ -8,8 +8,7 @@ const Profile = ({username, tag, location, avatar, stats}) => {
         <div className={styles.description}>
           <img
             src={avatar}
-            alt="User avatar"
-            
+            alt="User avatar"            
           />
           <p >{username}</p>
           <p >{tag}</p>
