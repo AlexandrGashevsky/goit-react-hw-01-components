@@ -1,8 +1,8 @@
-import Profile from './Profile/profile';
+import Profile from './profile/profile';
 import Statistics from './Statistics/Statistics';
 import data from '../data/user.json';
 import statisticsData from '../data/data.json';
-import FriendList from './FriendList/FriendList';
+import FriendList from './friendList/friendList';
 import TransactionHistory from './TransactionHistory/TransactionHistory';
 export const App = () => {
   return (
