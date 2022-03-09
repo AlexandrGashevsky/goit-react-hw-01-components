@@ -1,9 +1,9 @@
-import Profile from './profile/profile';
-import Statistics from './statistics/statistics';
-import data from './profile/user.json';
-import statisticsData from './statistics/data.json';
-import FriendList from './friendlist/friendlist';
-import TransactionHistory from './transactionhistory/transactionhistory';
+import Profile from './Profile/Profile';
+import Statistics from './Statistics/Statistics';
+import data from '../data/user.json';
+import statisticsData from '../data/data.json';
+import FriendList from './FriendList/FriendList';
+import TransactionHistory from './TransactionHistory/TransactionHistory';
 export const App = () => {
   return (
     <div
