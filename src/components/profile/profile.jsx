@@ -15,7 +15,6 @@ const Profile = ({username, tag, location, avatar, stats}) => {
           <p >{tag}</p>
           <p >{location}</p>
         </div>
-      
         <ul className={styles.list}>
           <li>
             <span className={styles.label}>Followers</span>
