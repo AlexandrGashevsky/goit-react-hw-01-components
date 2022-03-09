@@ -1,4 +1,4 @@
-import styles from './Profile.module.css';
+import styles from './profile.module.css';
 import PropTypes from "prop-types";
 
 

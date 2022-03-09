@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import transactionsData from '../../data/transactions.json';
-import transactionsStyles from './TransactionHistory.module.css';
+import transactionsStyles from './transactionhistory.module.css';
 import TransactionHistoryRow from '../transactionhistoryrow/transactionhistoryrow'
 
 
