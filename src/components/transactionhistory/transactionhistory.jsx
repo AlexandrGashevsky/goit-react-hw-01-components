@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import transactionsData from '../../data/transactions.json';
 import transactionsStyles from './TransactionHistory.module.css';
-import TransactionHistoryRow from '../TransactionHistoryRow/TransactionHistoryRow'
+import TransactionHistoryRow from '../transactionhistoryrow/transactionhistoryrow'
 
 
   const TransactionHistory = () => {   

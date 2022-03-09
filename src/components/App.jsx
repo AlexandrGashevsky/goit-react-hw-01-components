@@ -2,8 +2,8 @@ import Profile from './profile/profile';
 import Statistics from './statistics/statistics';
 import data from '../data/user.json';
 import statisticsData from '../data/data.json';
-import FriendList from './friendList/friendList';
-import TransactionHistory from './TransactionHistory/TransactionHistory';
+import FriendList from './friendlist/friendlist';
+import TransactionHistory from './transactionhistory/transactionhistory';
 export const App = () => {
   return (
     <div
