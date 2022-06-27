@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 
 const Profile = ({username, tag, location, avatar, stats}) => {
+  const {followers, views, likes} = stats;
     return (
         <div className={styles.card}>
         <div className={styles.description}>
@@ -17,15 +18,15 @@ const Profile = ({username, tag, location, avatar, stats}) => {
         <ul className={styles.list}>
           <li>
             <span className={styles.label}>Followers</span>
-            <span >{stats.followers}</span>
+            <span >{followers}</span>
           </li>
           <li>
             <span className={styles.label}>Views</span>
-            <span >{stats.views}</span>
+            <span >{views}</span>
           </li>
           <li>
             <span className={styles.label}>Likes</span>
-            <span >{stats.likes}</span>
+            <span >{likes}</span>
           </li>
         </ul>
       </div>
@@ -37,7 +38,11 @@ const Profile = ({username, tag, location, avatar, stats}) => {
     tag: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
     avatar: PropTypes.string.isRequired,
-    stats: PropTypes.object.isRequired,
+    stats: PropTypes.shape({
+      followers: PropTypes.number.isRequired,
+      views: PropTypes.number.isRequired,
+      likes: PropTypes.number.isRequired
+    }),
   };
 
 

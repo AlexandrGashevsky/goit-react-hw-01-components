@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
-import transactionsData from '../../data/transactions.json';
+
 import transactionsStyles from './transactionhistory.module.css';
 import TransactionHistoryRow from '../throw/throw'
 
 
-  const TransactionHistory = () => {   
+  const TransactionHistory = ({transactions}) => {   
     return (
       <table className={transactionsStyles.table}>
       <thead>
@@ -15,7 +15,7 @@ import TransactionHistoryRow from '../throw/throw'
         </tr>
       </thead>
       <tbody>
-      {transactionsData.map((transaction, index) => (
+      {transactions.map((transaction, index) => (
           <TransactionHistoryRow key={index} type={transaction.type} amount={transaction.amount} currency={transaction.currency}/>
           ))}
       </tbody>
@@ -25,9 +25,14 @@ import TransactionHistoryRow from '../throw/throw'
 
   TransactionHistoryRow.propTypes = {
     type: PropTypes.string.isRequired,
-    amount: PropTypes.string.isRequired,
+   amount: PropTypes.string.isRequired,
     currency: PropTypes.string.isRequired,
+   
   };
+
+  TransactionHistory.propTypes = {
+    transactions: PropTypes.array
+  }
 
   export default TransactionHistory;
 

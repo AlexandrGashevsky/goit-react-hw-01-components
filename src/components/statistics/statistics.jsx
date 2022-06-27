@@ -7,7 +7,7 @@ const Statistics = ({title, stats}) => {
 
             <ul className={statisticsStyles.list}>
             {stats.map((stat, index) => (
-            <li key={index} className={statisticsStyles.listElement}>
+            <li key={stat.id} className={statisticsStyles.listElement}>
                 <span>{stat.label}</span>
                 <span>{stat.percentage}</span>
             </li>
@@ -18,7 +18,7 @@ const Statistics = ({title, stats}) => {
   };
   
   Statistics.propTypes = {
-    title: PropTypes.string,
+    title: PropTypes.string.isRequired,
     stats: PropTypes.array.isRequired,
   };
 
