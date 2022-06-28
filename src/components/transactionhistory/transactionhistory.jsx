@@ -15,23 +15,23 @@ import TransactionHistoryRow from '../throw/throw'
         </tr>
       </thead>
       <tbody>
-      {transactions.map((transaction, index) => (
-          <TransactionHistoryRow key={index} type={transaction.type} amount={transaction.amount} currency={transaction.currency}/>
+      {transactions.map((transaction) => (
+          <TransactionHistoryRow key={transaction.id} type={transaction.type} amount={transaction.amount} currency={transaction.currency}/>
           ))}
       </tbody>
       </table>
     );
   };
 
-  TransactionHistoryRow.propTypes = {
-    type: PropTypes.string.isRequired,
-   amount: PropTypes.string.isRequired,
-    currency: PropTypes.string.isRequired,
-   
-  };
+
 
   TransactionHistory.propTypes = {
-    transactions: PropTypes.array
+    transactions: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+  })),
   }
 
   export default TransactionHistory;
